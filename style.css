@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(-45deg, #dedbd3, #110f10);
+    background-size: 400% 400%; 
+    animation: gradientWater 15s ease infinite; 
+    min-height: 100vh;
+}
+
+header {
+    background: #464649;
+    color: #fff;
+    padding: 0.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header h1 {
+    font-size: 1.5rem;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 1.5rem;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #4e73df;
+}
+
+main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem 4rem 1rem; /* Padding inferior para não cobrir pelo footer */
+}
+
+section {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+section h2 {
+    margin-bottom: 1rem;
+    color: #1e1e2f;
+}
+
+#produtos {
+    margin-top: 2rem;
+    background: transparent;
+    padding: 0;
+    box-shadow: none;
+}
+
+#produtos h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #fff; /* Cor branca para se destacar do fundo escuro */
+}
+
+.grid-produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); 
+    gap: 1.5rem;
+}
+
+.card-produto {
+    background: #fff;
+    padding: 1rem;            
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 250px;        
+    margin: 0 auto;         
+    width: 100%; 
+    transition: transform 0.3s ease;            
+}
+
+.card-produto:hover {
+    transform: scale(1.05);
+}
+
+.card-produto img {
+    width: 100%;
+    height: 140px;           
+    object-fit: contain;      
+    border-radius: 6px;
+    margin-bottom: 1rem;
+}
+
+.card-produto h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #1e1e2f;
+}
+
+.card-produto .preco {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #27ae60;
+    margin-bottom: 1rem;
+}
+
+.btn-comprar {
+    display: inline-block;
+    background: #4e73df;
+    color: #fff;
+    padding: 0.6rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.btn-comprar:hover {
+    background: #dd2430;
+    transform: scale(1.03);
+}
+
+footer {
+    text-align: center;
+    padding: 0.5rem;
+    background: #45454a;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+@keyframes gradientWater {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
